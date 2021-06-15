@@ -18,6 +18,12 @@ class HomeController extends GetxController {
     // 请求用户信息  并存储到 本地 缓存中
   }
 
+  @override
+  void onInit() {
+    setDrawerListArray();
+    super.onInit();
+  }
+
   void setDrawerListArray() {
     drawerList = <DrawerList>[
       DrawerList(
