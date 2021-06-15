@@ -3,4 +3,8 @@ class Regex {
     RegExp regExp = new RegExp(r'\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*');
     return regExp.hasMatch(email);
   }
+
+  static bool isString(String name) {
+    return true;
+  }
 }

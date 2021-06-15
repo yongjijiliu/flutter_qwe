@@ -34,12 +34,12 @@ class AuthScreen extends GetView<AuthController> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             InputField(
-              controller: controller.loginEmailController,
+              controller: controller.loginNameController,
               keyboardType: TextInputType.text,
               labelText: 'name'.tr,
               placeholder: 'nameTip'.tr,
               validator: (value) {
-                if (!Regex.isEmail(value!)) {
+                if (!Regex.isString(value!)) {
                   return 'nameErrorTip'.tr;
                 }
                 if (value.isEmpty) {
@@ -60,7 +60,7 @@ class AuthScreen extends GetView<AuthController> {
                   return 'passwordEmptyTip'.tr;
                 }
 
-                if (value.length < 6 || value.length > 15) {
+                if (value.length < 2 || value.length > 15) {
                   return 'passwordLengthErrorTip'.tr + '6 ~ 15';
                 }
 

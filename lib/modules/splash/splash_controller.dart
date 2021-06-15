@@ -14,11 +14,12 @@ class SplashController extends GetxController {
     // 设置为 中文显示
     var locale = Locale('zh', 'CN');
     Get.updateLocale(locale);
-
     await Future.delayed(Duration(milliseconds: 2000));
     var storage = Get.find<SharedPreferences>();
     try {
       if (storage.getString(StorageConstants.token) != null) {
+        // 校验token  是否 过期
+
         Get.toNamed(Routes.Home);
       } else {
         Get.toNamed(Routes.Auth);
