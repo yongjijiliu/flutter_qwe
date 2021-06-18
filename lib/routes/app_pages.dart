@@ -1,5 +1,7 @@
 import 'package:flutter_qwe/modules/auth/auth_binding.dart';
 import 'package:flutter_qwe/modules/auth/auth_srceen.dart';
+import 'package:flutter_qwe/modules/help/help_binding.dart';
+import 'package:flutter_qwe/modules/help/help_screen.dart';
 import 'package:flutter_qwe/modules/home/home.dart';
 import 'package:flutter_qwe/modules/splash/splash_binding.dart';
 import 'package:flutter_qwe/modules/splash/splash_screen.dart';
@@ -22,6 +24,14 @@ class AppPages {
       binding: AuthBinding(),
     ),
     GetPage(
-        name: Routes.Home, page: () => HomeScreen(), binding: HomeBinding()),
+      name: Routes.Home,
+      page: () => HomeScreen(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: Routes.Help,
+      page: () => HelpScreen(),
+      binding: HelpBinding(),
+    )
   ];
 }
