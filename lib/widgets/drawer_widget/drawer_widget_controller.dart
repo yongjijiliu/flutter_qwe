@@ -5,7 +5,8 @@ import 'package:get/get.dart';
 
 import 'drawer_list.dart';
 
-class CommonDrawerController extends GetxController {
+class CommonDrawerController extends GetxController
+    with SingleGetTickerProviderMixin {
   final ApiRepository apiRepository;
   CommonDrawerController({required this.apiRepository});
 

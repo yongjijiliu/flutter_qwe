@@ -6,7 +6,7 @@ class HomeController extends GetxController with SingleGetTickerProviderMixin {
   final ApiRepository apiRepository;
   HomeController({required this.apiRepository});
 
-  late AnimationController _controller;
+  late AnimationController animationController;
 
   @override
   void onReady() {
@@ -16,7 +16,7 @@ class HomeController extends GetxController with SingleGetTickerProviderMixin {
 
   @override
   void onInit() {
-    _controller = AnimationController(vsync: this);
+    animationController = AnimationController(vsync: this);
 
     super.onInit();
   }
@@ -24,6 +24,6 @@ class HomeController extends GetxController with SingleGetTickerProviderMixin {
   @override
   void onClose() {
     super.onClose();
-    _controller.dispose();
+    animationController.dispose();
   }
 }

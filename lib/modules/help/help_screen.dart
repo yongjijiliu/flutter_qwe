@@ -15,7 +15,7 @@ class HelpScreen extends GetView<HelpController> {
 
   Widget _buildBody() {
     return Container(
-      child: Text('帮助主页'),
+      child: Center(child: Text('帮助主页')),
     );
   }
 }

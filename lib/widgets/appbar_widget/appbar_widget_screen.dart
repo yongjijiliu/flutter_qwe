@@ -7,7 +7,9 @@ import 'package:get/get.dart';
 class AppbarWidgetScreen extends GetView<AppbarWidgetController> {
   final String title;
   final Widget body;
-  const AppbarWidgetScreen({required this.title, required this.body});
+  final Widget? bottomBar;
+  const AppbarWidgetScreen(
+      {required this.title, required this.body, this.bottomBar});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +19,16 @@ class AppbarWidgetScreen extends GetView<AppbarWidgetController> {
         appBar: AppBar(
           backgroundColor: AppTheme.white,
           elevation: 0,
-          title: Text(title.tr),
+          title: Text(
+            title.tr,
+            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600),
+          ),
           centerTitle: true,
           toolbarHeight: AppBar().preferredSize.height - 10,
           leading: Builder(
             builder: (context) => IconButton(
               icon: Icon(
-                Icons.settings,
+                Icons.arrow_back,
                 color: Colors.black,
               ),
               onPressed: () => {
@@ -35,6 +40,7 @@ class AppbarWidgetScreen extends GetView<AppbarWidgetController> {
         ),
         drawer: DrawerScreen(),
         body: body,
+        bottomNavigationBar: bottomBar,
       ),
     );
   }
