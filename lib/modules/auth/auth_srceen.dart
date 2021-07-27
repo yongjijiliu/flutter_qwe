@@ -15,7 +15,7 @@ class AuthScreen extends GetView<AuthController> {
       children: [
         GradientBackground(),
         Scaffold(
-          backgroundColor: Colors.transparent,
+          // backgroundColor: Colors.transparent,
           body: Container(
             alignment: Alignment.center,
             padding: EdgeInsets.symmetric(horizontal: 35.0),

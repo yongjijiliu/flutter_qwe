@@ -29,6 +29,8 @@ class AuthController extends GetxController {
     var res = await apiRepository.captchaImage();
     if (res!.img.isNotEmpty) {
       captcherImage = Image.memory(res.img);
+    }else{
+
     }
   }
 
